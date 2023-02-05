@@ -11,4 +11,4 @@ a fun little app for kids to collect and submit pictures of insects for identifi
 * Used back end verifications and validations to support the user in keeping the data for the user to create, read, update, and delete
 
 # Demo
-![Demo of Bug Catcher](/Demo.gif)
+![Demo of Bug Catcher]([/Demo.gif](https://media.giphy.com/media/4lZVSf4bu1fkAEoxct/giphy.gif))
