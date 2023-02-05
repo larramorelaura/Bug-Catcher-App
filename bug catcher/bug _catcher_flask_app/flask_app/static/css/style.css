@@ -1,0 +1,324 @@
+body {
+    background-image: url('/static/img/background.jpeg');
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+body::before {
+    
+    background-color: rgba(39, 35, 35, 0.35); 
+}
+
+.text-backgrounds{
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.5em;
+    background-color:rgba(5, 4, 4, 0.7);
+    width: 80%;
+    padding: 25px;
+}
+
+.page{
+    background-color: rgba(242, 235, 235, 0.45);
+    padding-bottom: 10px;
+    /* position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(17, 146, 82, 0.8);
+    position: sticky;
+    top: 0;
+    color: white;
+    padding: 0 10px;
+    margin-bottom: 40px;
+}
+
+a {
+    text-decoration:none;
+    color:white;
+
+}
+
+.bg-lightgreen{
+    background-color: rgb(7, 57, 7);
+    color: rgb(251, 218, 218);
+    font-size: 4em;
+    /* width: 90%;
+    margin: 0 auto; */
+}
+
+.collection-header {
+    text-align:center;
+    margin: 10px;
+    border-radius: 35px;
+}
+
+.page-info {
+    width: 50%;
+    margin: 0 auto;
+    color: rgb(235, 185, 185);
+    font-size: 1.5em;
+    background-color:rgba(5, 4, 4, 0.8);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.upload{
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 2em;
+}
+
+.upload form{
+    background-color: rgb(7, 57, 7, .8);
+    padding: 10px;
+    color: rgb(235, 185, 185);
+    border-radius: 15px;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.icon-size{
+    width: 90px;
+    height: 90px;
+    background-color: none;
+}
+
+.icon-colors {
+    color: rgb(235, 185, 185);
+}
+
+.upload>form>.upload_inputs>input::file-selector-button {
+    display: none;
+}
+
+#id_photo{
+    margin-right: -350px;
+}
+
+.submit-bt{
+    background-color:rgba(17, 146, 82); 
+    color: white;
+    border-radius: 15px;
+    border:none;
+    padding: 3px 6px 3px 6px;
+}
+
+.upload_inputs{
+    display:flex;
+    justify-content: center;
+}
+
+
+.collection-title {
+    background-color: #a4754c;
+    color: white;
+    text-align:center;
+    border-radius: 20px;
+    
+}
+
+.collection-category {
+    /* margin: 0 100px 50px 20px; */
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 10px 70px 0 70px;
+    column-gap: 15%;
+    row-gap: 10px;
+}
+
+.collection {
+    background-color:rgba(70, 61, 61, 0.8);
+    width: fit-content; 
+    /* To adjust the height as well */ 
+    height: fit-content;
+    padding: 10px;
+}
+
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    padding: 5%;;
+}
+
+.order-info{
+    width:50%;
+    padding: 10px;
+    margin-right:20px;
+}
+
+.facts {
+    background-color: #a4754c;
+    color: white;
+    text-align:center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.factoid{
+    width: 50%;
+    color: white;
+    background-color:rgba(5, 4, 4, 0.8);
+    border-radius: 15px;
+    padding: 10px;
+    height: fit-content;
+    margin-top: 70px;
+}
+
+.factoid :: not .factoid-text{
+    font-size: 2em;
+}
+
+.factoid-text{
+    font-size: 1.5em;
+}
+
+
+.text-guess {
+    text-align: center;
+    margin: 100px auto;
+    width: 40%;
+    background-color:rgb(7, 57, 7, .9);
+    color: white;
+    height: 20vw;
+    padding-top: 6%;
+    border-radius: 50%;
+}
+
+.sticker-label{
+    background-color: #a4754c;
+    color: white;
+    text-align:center;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 60%;
+}
+
+.stickers{
+    margin: 20px auto;
+    width: 50%;
+    background-color:rgba(70, 61, 61, 0.5);
+    width: fit-content; 
+    max-width: 60%;
+    /* To adjust the height as well */ 
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input.new_sticker[type="text"] {
+    display: none;
+}
+
+.login-reg{
+    margin: 50px 50px;
+    gap: 20%;
+}
+
+.edit-box{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.table-sizing {
+    width: 100%;
+}
+
+th{
+    border: solid white 2px;
+    font-size: .58em;
+}
+
+td{
+    border: solid white 2px;
+    font-size: .55em;
+    text-align: center;
+}
+
+@media screen and (max-width:500px){
+    .nav-bar{
+        font-size: 2em;
+    }
+
+    .login-reg{
+        flex-wrap: wrap;
+    }
+
+    .edit-box{
+        width:100%;
+    }
+
+    .login-reg input{
+        width: 50%;
+    }
+
+    .bg-lightgreen{
+        font-size: 8vw;
+        padding-top: 10px;
+    }
+
+    .page-info{
+        width: 80%;
+    }
+
+    .collection-grid{
+        margin: 20px;
+    }
+
+    .collection-title{
+        font-size: 1em;
+    }
+
+    .info{
+        display: block;
+    }
+
+    .order-info{
+        width:100%;
+        margin: auto;
+    }
+
+    .factoid {
+        width: 100%;
+        height: fit-content;
+        margin-top: 70px;
+    }
+
+    .upload>form>.upload_inputs>input#id_photo {
+        display: none;
+    }
+
+    .submit-bt{
+        width: 90%;
+        font-size: .6em; 
+    }
+
+    .text-guess {
+        text-align: center;
+        margin: 100px auto;
+        width: 70%;
+        background-color:rgb(7, 57, 7, .9);
+        color: white;
+        height: 30vw;
+        padding-top: 6%;
+        border-radius: 50%;
+    }
+}

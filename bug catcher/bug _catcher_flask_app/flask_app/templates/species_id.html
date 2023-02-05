@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Get Outside!</title>
+</head>
+<body>
+    <div class="page">
+        <header class="nav-bar">
+            <div>
+                <h1 class="text-reset">Get Outside</h1>
+                
+            </div>
+            <div>
+                <div class="nav-links d-flex gap-3 align-items-center">
+                    <h5><a href="/collection/{{user.id}}">Collection</a> | <a href="/edit/{{user.id}}">Edit Profile</a></h5>
+                    <form action="/logout" method="post">
+                        <input class="btn btn-success" type="submit" value="Logout">
+                    </form>
+                </div>
+                
+            </div>
+        </header>
+        <h2 class="bg-lightgreen collection-header" style="height:80px;">Your Species ID</h2>
+        <div class="id-guess">
+            <img>
+            <div class="text-guess">
+                <h2>We think you found a</h2>
+                <h1>{{name}}</h1>
+            </div>
+        </div>
+        <h1 class="sticker-label">Choose a sticker to add to your collection</h1>
+        <div class="stickers">
+            {%for sticker in sticker_choices%}
+            <form id="{{sticker.id}}" method="post" action="/new/stickers/create">
+                <label for="new_sticker">
+                    <input class="new_sticker" name="new_sticker" type="text" value="{{sticker.id}}">
+                    <input type="image" src="{{url_for('static', filename=sticker.filename)}}" alt="{{sticker.description}}">
+                </label>
+            </form>
+            {%endfor%}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.board{
+}
+.row{
+    display:flex;
+}
+.box{
+    width: 150px;
+    height: 150px;
+}
+.bg-black{
+    background-color: black;
+}
+.bg-red{
+    background-color: red;
+}
+
+h1{
+    background-color: black;
+    color: red;
+    text-align:center;
+}
+
